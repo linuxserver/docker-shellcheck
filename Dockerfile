@@ -8,7 +8,11 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 
 # environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
-ENV LC_ALL=en_US.iso88591
+ENV LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.iso88591"
+
+# Set the locale
+RUN locale-gen en_US.UTF-8
+
 
 # build packages as variable
 ARG BUILD_PACKAGES="\
