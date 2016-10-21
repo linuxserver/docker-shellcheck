@@ -8,11 +8,15 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 
 # environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
+ENV LC_ALL=en_US.iso88591
 
 # build packages as variable
 ARG BUILD_PACKAGES="\
 	cabal-install \
 	git"
+
+# Set the locale
+RUN locale-gen en_US.iso88591
 
 # install build packages
 RUN \
