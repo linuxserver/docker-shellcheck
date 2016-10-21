@@ -19,9 +19,13 @@ ARG BUILD_PACKAGES="\
 	cabal-install \
 	git"
 
-# install build packages
+# install runtime packages
 RUN \
  apt-get update && \
+ apt-get install -y \
+	tzdata && \
+
+# install build packages
  apt-get install -y \
 	$BUILD_PACKAGES && \
 
