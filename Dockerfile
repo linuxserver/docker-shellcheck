@@ -19,9 +19,6 @@ ARG BUILD_PACKAGES="\
 	cabal-install \
 	git"
 
-# Set the locale
-RUN locale-gen en_US.iso88591
-
 # install build packages
 RUN \
  apt-get update && \
