@@ -1,0 +1,1396 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<checkstyle version='4.3'>
+<file name='/mnt/test.sh' >
+<error line='3' column='10' severity='warning' message='For loops over find output are fragile. Use find &#45;exec or a while read loop.' source='ShellCheck.SC2044' />
+<error line='6' column='3' severity='warning' message='Use cd ... &#124;&#124; exit in case cd fails.' source='ShellCheck.SC2164' />
+<error line='6' column='6' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+</file>
+<file name='/mnt/cleanbuild.sh' >
+<error line='6' column='13' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='7' column='14' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='8' column='15' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+</file>
+<file name='/mnt/.ssh/known&#95;hosts' >
+<error line='1' column='1' severity='error' message='Parsing stopped here. Mismatched keywords or invalid parentheses&#63;' source='ShellCheck.SC1070' />
+</file>
+<file name='/mnt/.ssh/authorized&#95;keys' >
+</file>
+<file name='/mnt/.bash&#95;logout' >
+</file>
+<file name='/mnt/.profile' >
+<error line='15' column='2' severity='warning' message='Can&#39;t follow non&#45;constant source. Use a directive to specify location.' source='ShellCheck.SC1090' />
+</file>
+<file name='/mnt/.bashrc' >
+<error line='48' column='10' severity='warning' message='force&#95;color&#95;prompt is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='77' column='26' severity='info' message='Note that A &#38;&#38; B &#124;&#124; C is not if&#45;then&#45;else. C may run when A is true.' source='ShellCheck.SC2015' />
+<error line='105' column='5' severity='warning' message='Can&#39;t follow non&#45;constant source. Use a directive to specify location.' source='ShellCheck.SC1090' />
+<error line='113' column='5' severity='info' message='Not following&#58; /usr/share/bash&#45;completion/bash&#95;completion was not specified as input &#40;see shellcheck &#45;x&#41;.' source='ShellCheck.SC1091' />
+<error line='115' column='5' severity='info' message='Not following&#58; /etc/bash&#95;completion was not specified as input &#40;see shellcheck &#45;x&#41;.' source='ShellCheck.SC1091' />
+</file>
+<file name='/mnt/.cache/motd.legal&#45;displayed' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/Dockerfile' >
+<error line='28' column='2' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='38' column='5' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='39' column='6' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='45' column='2' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/COMMIT&#95;EDITMSG' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/refs/remotes/origin/master' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/refs/remotes/origin/HEAD' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/refs/heads/master' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/description' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/HEAD' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/hooks/pre&#45;applypatch.sample' >
+<error line='11' column='1' severity='info' message='Not following&#58; git&#45;sh&#45;setup was not specified as input &#40;see shellcheck &#45;x&#41;.' source='ShellCheck.SC1091' />
+<error line='13' column='43' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/hooks/pre&#45;commit.sample' >
+<error line='31' column='7' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/hooks/pre&#45;rebase.sample' >
+<error line='19' column='1' severity='warning' message='basebranch appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='24' column='8' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='46' column='15' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='54' column='13' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='55' column='13' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='58' column='15' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='67' column='14' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/hooks/update.sample' >
+<error line='40' column='20' severity='warning' message='Prefer &#91; p &#93; &#124;&#124; &#91; q &#93; as &#91; p &#45;o q &#93; is not well defined.' source='ShellCheck.SC2166' />
+<error line='40' column='36' severity='warning' message='Prefer &#91; p &#93; &#124;&#124; &#91; q &#93; as &#91; p &#45;o q &#93; is not well defined.' source='ShellCheck.SC2166' />
+<error line='67' column='32' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='89' column='55' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='98' column='28' severity='warning' message='Prefer &#91; p &#93; &#38;&#38; &#91; q &#93; as &#91; p &#45;a q &#93; is not well defined.' source='ShellCheck.SC2166' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/hooks/pre&#45;push.sample' >
+<error line='22' column='1' severity='warning' message='remote appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='23' column='1' severity='warning' message='url appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='27' column='7' severity='info' message='read without &#45;r will mangle backslashes.' source='ShellCheck.SC2162' />
+<error line='27' column='32' severity='warning' message='remote&#95;ref appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='44' column='10' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/hooks/prepare&#45;commit&#45;msg.sample' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/hooks/applypatch&#45;msg.sample' >
+<error line='12' column='1' severity='info' message='Not following&#58; git&#45;sh&#45;setup was not specified as input &#40;see shellcheck &#45;x&#41;.' source='ShellCheck.SC1091' />
+<error line='14' column='43' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/hooks/post&#45;update.sample' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/hooks/commit&#45;msg.sample' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/config' >
+<error line='1' column='1' severity='error' message='You need a space after the &#91; and before the &#93;.' source='ShellCheck.SC1035' />
+<error line='1' column='1' severity='error' message='Couldn&#39;t parse this test expression.' source='ShellCheck.SC1073' />
+<error line='1' column='6' severity='error' message='You need a space before the &#93;.' source='ShellCheck.SC1020' />
+<error line='1' column='6' severity='error' message='Missing space before &#93;. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/index' >
+<error line='3' column='43' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='43' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/info/exclude' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/packed&#45;refs' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/logs/refs/remotes/origin/master' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/logs/refs/remotes/origin/HEAD' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/logs/refs/heads/master' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/logs/HEAD' >
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/70/7aa4aa75f014f8f77c2d2dff15e018343c022f' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/70/fcbbc1188f21b55c6c8441c983ebd378def18d' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/cc/a6823fac7077eed4a6979b16fb0ac0e32411bd' >
+<error line='2' column='27' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/69/fc7f6d43efdfd063129e8efa21676213476dfd' >
+<error line='2' column='14' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='2' column='14' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/f6/b5a03616ae18308bebd54c94d2a372508443df' >
+<error line='1' column='38' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/e5/141bbef4b7a2922a00639a06a99c90bc6853e0' >
+<error line='1' column='22' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/35/8e6b1a63fce6740b090163a080227087146f97' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/4b/f6a8bf2f42cb24d74c9a2c2837a4adbee21481' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/04/f7e01ad077bb8f003fcf0434f1df5d543ec84c' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/04/b5ebfdc53a4ab7a339bb8bca0aaa36449043d5' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/2b/680923f074d5f1836b3421ccc304882ed36923' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/b6/e3d3318b1dad4f1c28ccc351ab2e45a7f88c04' >
+<error line='1' column='31' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='31' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/ab/51cfbfae5c09a605d656d0497acb51a376246f' >
+<error line='1' column='19' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/54/5635fb535a46c22412fc6d87875d6d8ef5fdb9' >
+<error line='1' column='22' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='27' severity='error' message='Couldn&#39;t parse this redirection.' source='ShellCheck.SC1073' />
+<error line='1' column='28' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/48/2dbc870eaabad0c6931546d3c7abf9e02913e7' >
+<error line='3' column='69' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='69' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/07/c3d73126d75dac6468fd3d2414c683f1eda7ce' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/8c/67ba6f592734bdfcb4df6e4de2c60add723f3d' >
+<error line='1' column='62' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='103' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='125' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='137' severity='error' message='Couldn&#39;t parse this single quoted string.' source='ShellCheck.SC1073' />
+<error line='1' column='171' severity='error' message='Expected end of single quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/94/ff070144a8225ec4cecac9f1614f564b9036c1' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/a7/161b3e886bd118d1011643bbeaa8a3379bed2f' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/57/4fb296b188580dc4ee7c00cca39604f2430dda' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/1b/004abf30eb6b4d2c63055a2d3aa5a33530d19d' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/01/7dd18b51050f04b3ac587188e93a07156def92' >
+<error line='1' column='53' severity='error' message='It&#39;s not &#39;foo &#38;&#59; bar&#39;&#44; just &#39;foo &#38; bar&#39;.' source='ShellCheck.SC1045' />
+<error line='1' column='58' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='1' column='58' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='1' column='63' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='79' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='1' column='109' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='1' column='145' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='2' column='2' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='2' column='2' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/b9/59cf307c47c08bbc454dec93160b125a03801a' >
+<error line='1' column='30' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='30' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/b9/708c4f40a0d9c3bfba967b1820e7a2894c1623' >
+<error line='1' column='96' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/98/f617883d5ef32833b594be390ebf9407a0201a' >
+<error line='1' column='15' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='25' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='1' column='72' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='2' column='10' severity='error' message='Couldn&#39;t parse this double quoted string.' source='ShellCheck.SC1073' />
+<error line='2' column='12' severity='error' message='Expected end of double quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+<error line='2' column='12' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='2' column='12' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/a2/70c7f3be71c05f76c96f409a2c070d90339774' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/a5/f93e4157fee67541117ac85f57e4f343d8e3da' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/93/c6dd7da5304805cc70432ab89db565e36b1ee9' >
+<error line='2' column='2' severity='info' message='The mentioned parser error was in this redirection.' source='ShellCheck.SC1009' />
+<error line='2' column='23' severity='error' message='Couldn&#39;t parse this backtick expansion.' source='ShellCheck.SC1073' />
+<error line='3' column='12' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/.git/objects/02/abde5715702dd08e81c4e63180489bdb1b78b5' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/checkstyle.xml' >
+<error line='1' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='38' severity='error' message='Couldn&#39;t parse this redirection.' source='ShellCheck.SC1073' />
+<error line='1' column='39' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker&#45;shellcheck/README.md' >
+</file>
+<file name='/mnt/.gitconfig' >
+<error line='1' column='1' severity='error' message='You need a space after the &#91; and before the &#93;.' source='ShellCheck.SC1035' />
+<error line='1' column='1' severity='error' message='Couldn&#39;t parse this test expression.' source='ShellCheck.SC1073' />
+<error line='1' column='6' severity='error' message='You need a space before the &#93;.' source='ShellCheck.SC1020' />
+<error line='1' column='6' severity='error' message='Missing space before &#93;. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/F2/84FCC8C54FBFD68EF9E319A863DC13.jar' >
+<error line='3' column='13' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='3' column='77' severity='warning' message='n is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='3' column='77' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='3' column='122' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='126' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='126' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/36/C258B4E2DE0B6470B482CA1217CEE2.jar' >
+<error line='3' column='67' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='3' column='111' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='3' column='124' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='3' column='141' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='141' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+<error line='3' column='173' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='3' column='174' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='3' column='174' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='4' column='95' severity='info' message='This &#92;8 will be a regular &#39;8&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='4' column='147' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='4' column='160' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='4' column='160' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='15' column='158' severity='warning' message='x is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='15' column='461' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='15' column='461' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/36/33F078A5233BC887F2ABDC66D8EC3C.jar' >
+<error line='3' column='121' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/B0/CFADAB23AEA2E81A745814E4A07B05.jar' >
+<error line='2' column='109' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/B0/4A2CA51E7D6155FB69DE8B84249523.jar' >
+<error line='1' column='149' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='149' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/B0/55CF75C7EF41789781E4D2F5435763.jar' >
+<error line='1' column='83' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='83' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/0C/170760462DB5B499374D9EFCFD02A8.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/22/C7930B1AD486D34C68963108F463BA.jar' >
+<error line='3' column='59' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='125' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='3' column='125' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='3' column='131' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='3' column='131' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='4' column='18' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='4' column='60' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='8' column='22' severity='warning' message='Did you forget to close this double quoted string&#63;' source='ShellCheck.SC1078' />
+<error line='49' column='22' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='62' column='103' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='62' column='236' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='63' column='225' severity='warning' message='if is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='63' column='442' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='65' column='548' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='65' column='548' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='65' column='551' severity='info' message='This &#92;&#226; will be a regular &#39;&#226;&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='65' column='584' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='65' column='664' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='65' column='664' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/AF/3900F56030E27951025C9CA7265263.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/50/C2A7ABD02B7A85680D412F324BE724.jar' >
+<error line='5' column='59' severity='info' message='The mentioned parser error was in this backtick expansion.' source='ShellCheck.SC1009' />
+<error line='5' column='60' severity='error' message='Couldn&#39;t parse this simple command.' source='ShellCheck.SC1073' />
+<error line='5' column='123' severity='error' message='Expected end of translated double quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/6C/9CB13E6476515C5D2744911770081C.jar' >
+<error line='4' column='55' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='5' column='243' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/21/06F1EF0FB710683187C98FE4AA61C3.jar' >
+<error line='4' column='42' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='4' column='42' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/17/9C6DA386E57592D54A1612935AF4D0.jar' >
+<error line='3' column='76' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='76' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/60/4351E301207E4FA3C701C02EFCEBC8.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/85/A701A55C20E347B60035705EF9C392.jar' >
+<error line='2' column='31' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/E3/FFCD9AA66C84CD23BB81D6C639F210.jar' >
+<error line='3' column='95' severity='info' message='This word is outside of quotes. Did you intend to &#39;nest &#39;&#34;&#39;single quotes&#39;&#34;&#39; instead&#39;&#63; ' source='ShellCheck.SC2026' />
+<error line='3' column='103' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/73/D0FDF31B18DCE86D0B2B3AA4C0FDBD.jar' >
+<error line='2' column='7' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/69/EE9CA00DAB25BF9C5C16BB38A4D51D.jar' >
+<error line='1' column='112' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='13' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='2' column='31' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/A3/6293DAF376F435A0C65BDCE2937E74.jar' >
+<error line='2' column='442' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/A3/C1F5D40667CA8EAE27355ACC358B50.jar' >
+<error line='3' column='13' severity='info' message='This &#92;l will be a regular &#39;l&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='5' column='150' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='5' column='152' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='5' column='152' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='5' column='155' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='5' column='185' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='5' column='205' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='6' column='6' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='6' column='6' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='6' column='6' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='7' column='6' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='9' column='6' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='9' column='6' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='9' column='6' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='10' column='6' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='11' column='6' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='11' column='6' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='12' column='6' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='13' column='6' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='13' column='6' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='13' column='107' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='15' column='17' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='17' column='256' severity='warning' message='&#236; is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='17' column='276' severity='warning' message='g is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='17' column='389' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='17' column='403' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='18' column='136' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='20' column='25' severity='info' message='This &#92;7 will be a regular &#39;7&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='20' column='36' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='20' column='65' severity='info' message='This &#92;&#139; will be a regular &#39;&#139;&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='20' column='119' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/3D/8E63D3B9170E9B7587594DE438F94C.jar' >
+<error line='3' column='10' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='3' column='53' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='4' column='98' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='5' column='51' severity='info' message='This &#92;&#226; will be a regular &#39;&#226;&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='5' column='66' severity='info' message='This &#92;&#15; will be a regular &#39;&#15;&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='30' column='166' severity='info' message='This &#92;&#188; will be a regular &#39;&#188;&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='30' column='186' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='30' column='186' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/35/D7B6029D9F1DDDEF584B12BD038EBA.jar' >
+<error line='3' column='10' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='4' column='75' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='4' column='126' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='23' column='312' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/A9/C0929262459775B749FCF472FA9DE6.jar' >
+<error line='4' column='15' severity='info' message='This &#92;W will be a regular &#39;W&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='4' column='107' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='4' column='107' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='11' column='100' severity='warning' message='Word is on the form &#34;A&#34;B&#34;C&#34; &#40;B indicated&#41;. Did you mean &#34;ABC&#34; or &#34;A&#92;&#34;B&#92;&#34;C&#34;&#63;' source='ShellCheck.SC2140' />
+<error line='11' column='180' severity='error' message='You are missing a required space after the &#33;.' source='ShellCheck.SC1035' />
+<error line='11' column='257' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='11' column='290' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='11' column='290' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/76/6B1544A267DC9EA57735D913F3B493.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/9B/12E4381689FC456A1C5ECDE11F063E.jar' >
+<error line='3' column='13' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/FE/4C264E639D06F42E6ADDA720A7F5DF.jar' >
+<error line='3' column='10' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/04/D04F08030B7FF8337135F2FE2724A7.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/67/72AEE41CB5CD982BAD404B814B498E.jar' >
+<error line='3' column='120' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='120' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/3E/F61A988E582517AA842B98FA54C586.jar' >
+<error line='3' column='70' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='70' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/3E/9AE809D6A5DD77B86DF0D0010AE60E.jar' >
+<error line='2' column='71' severity='warning' message='Did you forget to close this single quoted string&#63;' source='ShellCheck.SC1078' />
+<error line='3' column='16' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/9E/2AF9045A0E0FBF520FE664585A9E4F.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/56/5DD9080527C3A45BEB982881433FC7.jar' >
+<error line='3' column='10' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='10' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/45/C1075783BB8FB055AF78EBC3B6B2CB.jar' >
+<error line='2' column='95' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/D2/BED1408D1C8DD0873D9B91958BB582.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/52/667741E0B2A0765F4C585875CEF3DE.jar' >
+<error line='4' column='60' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='4' column='103' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='4' column='111' severity='info' message='This &#92;&#0; will be a regular &#39;&#0;&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='11' column='562' severity='warning' message='&#252;&#202; is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='11' column='562' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='11' column='572' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='11' column='572' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/68/275882C8D31CAC88CDDAFAD86DA00E.jar' >
+<error line='3' column='92' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='3' column='179' severity='error' message='Couldn&#39;t parse this backtick expansion.' source='ShellCheck.SC1073' />
+<error line='3' column='179' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='3' column='209' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+<error line='10' column='365' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/F9/AAD90E519F7BF052E8AC646C7BFFA1.jar' >
+<error line='3' column='47' severity='info' message='This &#92;&#219; will be a regular &#39;&#219;&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='3' column='53' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='102' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='104' severity='warning' message='g is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='3' column='104' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='3' column='109' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='131' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='131' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/31/F0E069BACE3FC7D8FEE5484B144572.jar' >
+<error line='1' column='87' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='1' column='100' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='10' column='60' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='11' column='70' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='12' column='57' severity='warning' message='This apostrophe terminated the single quoted string&#33;' source='ShellCheck.SC1011' />
+<error line='12' column='68' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/94/C32396B1A899536C1C700411553BEA.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/D4/7363E33E4C720064004B16BBA2C1E9.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/CA/89A48EB4885B58F67965940F50F451.jar' >
+<error line='3' column='18' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/BD/5F5805DD4F127B9A9D5CCD518A08A5.jar' >
+<error line='3' column='67' severity='error' message='Literal carriage return. Run script through tr &#45;d &#39;&#92;r&#39; .' source='ShellCheck.SC1017' />
+<error line='4' column='47' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='70' column='61' severity='warning' message='ResourceEnumeration is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='70' column='61' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='70' column='168' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/DB/8A4DF2E81A8CAD5CE8FFDC86EB96D0.jar' >
+<error line='2' column='8' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/1F/010F383654E1F95625595B64691EA1.jar' >
+<error line='3' column='104' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='3' column='413' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/BE/0CA4AB593A1096DD769FE1EE5B03CB.jar' >
+<error line='1' column='73' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='77' severity='error' message='Couldn&#39;t parse this process substitution.' source='ShellCheck.SC1073' />
+<error line='1' column='81' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/37/4188607756438F1C739131F41F7050.jar' >
+<error line='3' column='53' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='331' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='3' column='332' severity='error' message='Couldn&#39;t parse this double quoted string.' source='ShellCheck.SC1073' />
+<error line='4' column='104' severity='error' message='Expected end of double quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/43/40761395C5547C9B739D0DFB6586E9.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/14/BCE94DD1F2619F3DDAC05C3EAD7634.jar' >
+<error line='3' column='10' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='4' column='69' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='5' column='64' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='5' column='85' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='5' column='105' severity='error' message='Couldn&#39;t parse this double quoted string.' source='ShellCheck.SC1073' />
+<error line='5' column='132' severity='error' message='Expected end of double quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+<error line='5' column='132' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/A7/64372B00CA4A06B37D9CDE1DBF98C5.jar' >
+<error line='2' column='138' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/A7/919EFC2E8401B0D2D7AB1168D48520.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/C2/6DEE0DB71344F5159FEBFCD6E52613.jar' >
+<error line='3' column='63' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/62/5625C6924B885DCDB6380F667BD26B.jar' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/10/54F58A918C3947C07AB210CF39B887.jar' >
+<error line='2' column='108' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='2' column='108' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/98/EF447F046C2132ABDF31B4D81ED52B.jar' >
+<error line='1' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='90' severity='error' message='Couldn&#39;t parse this backtick expansion.' source='ShellCheck.SC1073' />
+<error line='1' column='90' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='1' column='110' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='274' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='302' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+<error line='3' column='11' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='3' column='11' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/3A/7DE2F554C7BD0D9FD82348534ED858.jar' >
+<error line='29' column='22' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/3A/5EA068B0AD38FC97A481A9458CB11F.jar' >
+<error line='22' column='75' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='22' column='75' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/A0/3191BCF24100B2982ECB48C431B8F3.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/E2/00228057FC3658BECC4B34CC91F0FD.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/E2/DB61AFEAF868ABF5814EADCE114406.jar' >
+<error line='2' column='92' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='97' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='173' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='2' column='198' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='201' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/8D/9F5EC617C083DD38FB6AA3ED46FBD0.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.jenkins/cache/jars/5E/D1268CBE69F4CBDA625237FA50C56A.jar' >
+<error line='3' column='56' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/.bash&#95;history' >
+<error line='260' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='260' column='4' severity='error' message='Couldn&#39;t parse this backtick expansion.' source='ShellCheck.SC1073' />
+<error line='1652' column='1' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/get&#45;git.sh' >
+<error line='15' column='1' severity='warning' message='Use cd ... &#124;&#124; exit in case cd fails.' source='ShellCheck.SC2164' />
+</file>
+<file name='/mnt/.nano/search&#95;history' >
+</file>
+<file name='/mnt/docker/development/docker&#45;ampache/Dockerfile' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/Dockerfile' >
+<error line='8' column='13' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/README.md' >
+<error line='1' column='1' severity='error' message='You need a space after the &#91; and before the &#93;.' source='ShellCheck.SC1035' />
+<error line='1' column='1' severity='error' message='Couldn&#39;t parse this test expression.' source='ShellCheck.SC1073' />
+<error line='1' column='19' severity='error' message='Expected test to end here &#40;don&#39;t wrap commands in &#91;&#93;/&#91;&#91;&#93;&#93;&#41;. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/hooks/post&#45;update.sample' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/hooks/pre&#45;applypatch.sample' >
+<error line='11' column='1' severity='info' message='Not following&#58; git&#45;sh&#45;setup was not specified as input &#40;see shellcheck &#45;x&#41;.' source='ShellCheck.SC1091' />
+<error line='13' column='43' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/hooks/commit&#45;msg.sample' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/hooks/pre&#45;commit.sample' >
+<error line='31' column='7' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/hooks/applypatch&#45;msg.sample' >
+<error line='12' column='1' severity='info' message='Not following&#58; git&#45;sh&#45;setup was not specified as input &#40;see shellcheck &#45;x&#41;.' source='ShellCheck.SC1091' />
+<error line='14' column='43' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/hooks/pre&#45;rebase.sample' >
+<error line='19' column='1' severity='warning' message='basebranch appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='24' column='8' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='46' column='15' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='54' column='13' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='55' column='13' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='58' column='15' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='67' column='14' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/hooks/update.sample' >
+<error line='40' column='20' severity='warning' message='Prefer &#91; p &#93; &#124;&#124; &#91; q &#93; as &#91; p &#45;o q &#93; is not well defined.' source='ShellCheck.SC2166' />
+<error line='40' column='36' severity='warning' message='Prefer &#91; p &#93; &#124;&#124; &#91; q &#93; as &#91; p &#45;o q &#93; is not well defined.' source='ShellCheck.SC2166' />
+<error line='67' column='32' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='89' column='55' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='98' column='28' severity='warning' message='Prefer &#91; p &#93; &#38;&#38; &#91; q &#93; as &#91; p &#45;a q &#93; is not well defined.' source='ShellCheck.SC2166' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/hooks/pre&#45;push.sample' >
+<error line='22' column='1' severity='warning' message='remote appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='23' column='1' severity='warning' message='url appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='27' column='7' severity='info' message='read without &#45;r will mangle backslashes.' source='ShellCheck.SC2162' />
+<error line='27' column='32' severity='warning' message='remote&#95;ref appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='44' column='10' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/hooks/prepare&#45;commit&#45;msg.sample' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/objects/9f/110888cb7d7ec550095a22e0f8b264b10433fa' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/objects/65/fc5dba89d06e69efb6eb0b7bc36fd6acdc3a71' >
+<error line='1' column='39' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='1' column='39' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='1' column='111' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='1' column='116' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='2' column='34' severity='warning' message='Did you forget to close this single quoted string&#63;' source='ShellCheck.SC1078' />
+<error line='3' column='175' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/objects/4f/954e1e549bb17434007605b97ea876081d0714' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/objects/pack/pack&#45;269272fb9d341418a6335bdc4743a6769543d7fb.pack' >
+<error line='1' column='55' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/objects/pack/pack&#45;269272fb9d341418a6335bdc4743a6769543d7fb.idx' >
+<error line='2' column='128' severity='warning' message='Did you forget to close this single quoted string&#63;' source='ShellCheck.SC1078' />
+<error line='3' column='291' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='3' column='331' severity='warning' message='This apostrophe terminated the single quoted string&#33;' source='ShellCheck.SC1011' />
+<error line='4' column='23' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='4' column='32' severity='error' message='Couldn&#39;t parse this double quoted string.' source='ShellCheck.SC1073' />
+<error line='4' column='132' severity='error' message='Expected end of double quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+<error line='4' column='132' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/objects/5e/5b064ac0488b8963abb318c8fbe618e997b252' >
+<error line='1' column='214' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='244' severity='error' message='Couldn&#39;t parse this double quoted string.' source='ShellCheck.SC1073' />
+<error line='1' column='297' severity='error' message='Expected end of double quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+<error line='1' column='297' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/objects/b6/28e392417262a71ab178ec875ab314c0275fc8' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/objects/0e/4fc9c6e71cef94a19373eb65d90034833b9db9' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/objects/61/1919606ccaa16541a7f4cd8ade5ce5e25b23dc' >
+<error line='1' column='53' severity='info' message='This &#92;&#209; will be a regular &#39;&#209;&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='1' column='57' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='1' column='73' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='1' column='84' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/info/exclude' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/description' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/config' >
+<error line='1' column='1' severity='error' message='You need a space after the &#91; and before the &#93;.' source='ShellCheck.SC1035' />
+<error line='1' column='1' severity='error' message='Couldn&#39;t parse this test expression.' source='ShellCheck.SC1073' />
+<error line='1' column='6' severity='error' message='You need a space before the &#93;.' source='ShellCheck.SC1020' />
+<error line='1' column='6' severity='error' message='Missing space before &#93;. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/packed&#45;refs' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/logs/HEAD' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/logs/refs/remotes/origin/HEAD' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/logs/refs/remotes/origin/xenial' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/logs/refs/heads/xenial' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/logs/refs/heads/master' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/COMMIT&#95;EDITMSG' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/index' >
+<error line='1' column='15' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='1' column='23' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='2' column='21' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='2' column='29' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='2' column='93' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='2' column='101' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='3' column='50' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='3' column='58' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='3' column='95' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='4' column='68' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='4' column='76' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='5' column='2' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='5' column='2' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/HEAD' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/refs/heads/master' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/refs/heads/xenial' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/refs/remotes/origin/HEAD' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/.git/refs/remotes/origin/xenial' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/root/defaults/my.cnf' >
+<error line='3' column='1' severity='error' message='You need a space after the &#91; and before the &#93;.' source='ShellCheck.SC1035' />
+<error line='3' column='1' severity='error' message='Couldn&#39;t parse this test expression.' source='ShellCheck.SC1073' />
+<error line='3' column='13' severity='error' message='You need a space before the &#93;.' source='ShellCheck.SC1020' />
+<error line='3' column='13' severity='error' message='Missing space before &#93;. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/root/etc/cont&#45;init.d/30&#95;config' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/root/etc/cont&#45;init.d/40&#45;initialise&#45;db' >
+<error line='72' column='6' severity='info' message='Useless echo&#63; Instead of &#39;echo &#36;&#40;cmd&#41;&#39;&#44; just use &#39;cmd&#39;.' source='ShellCheck.SC2005' />
+</file>
+<file name='/mnt/docker/development/docker&#45;mariadb/root/etc/services.d/mariadb/run' >
+</file>
+<file name='/mnt/docker/development/docker&#45;mineos/Dockerfile' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/Dockerfile' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.dockerignore' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.gitattributes' >
+<error line='2' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='5' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='8' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='9' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='10' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='11' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='12' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='13' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='14' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='15' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='16' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='17' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.gitignore' >
+<error line='9' column='1' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='12' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='13' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='14' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='15' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+<error line='18' column='1' severity='info' message='Use ./&#42;glob&#42; or &#45;&#45; &#42;glob&#42; so names with dashes won&#39;t become options.' source='ShellCheck.SC2035' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/root/defaults/default.conf' >
+<error line='1' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='18' severity='error' message='Couldn&#39;t parse this redirection.' source='ShellCheck.SC1073' />
+<error line='1' column='18' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/root/defaults/httpd.conf' >
+<error line='151' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='151' column='30' severity='error' message='Couldn&#39;t parse this redirection.' source='ShellCheck.SC1073' />
+<error line='151' column='30' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/root/defaults/php&#45;fpm.conf' >
+<error line='1' column='1' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/root/defaults/index.html' >
+<error line='1' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='15' severity='error' message='Couldn&#39;t parse this redirection.' source='ShellCheck.SC1073' />
+<error line='1' column='15' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/root/etc/cont&#45;init.d/30&#45;config' >
+<error line='16' column='28' severity='warning' message='Prefer &#91; p &#93; &#124;&#124; &#91; q &#93; as &#91; p &#45;o q &#93; is not well defined.' source='ShellCheck.SC2166' />
+<error line='16' column='31' severity='error' message='This expression is constant. Did you forget a &#36; somewhere&#63;' source='ShellCheck.SC2078' />
+<error line='16' column='51' severity='warning' message='Prefer &#91; p &#93; &#124;&#124; &#91; q &#93; as &#91; p &#45;o q &#93; is not well defined.' source='ShellCheck.SC2166' />
+<error line='16' column='54' severity='error' message='This expression is constant. Did you forget a &#36; somewhere&#63;' source='ShellCheck.SC2078' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/root/etc/cont&#45;init.d/40&#45;keygen' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/root/etc/services.d/fpm/run' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/root/etc/services.d/web/run' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/root/etc/services.d/web/finish' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/root/etc/services.d/cron/run' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/root/etc/logrotate/web' >
+<error line='1' column='26' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='13' column='1' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.github/PULL&#95;REQUEST&#95;TEMPLATE.md' >
+<error line='1' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='70' severity='error' message='Couldn&#39;t parse this redirection.' source='ShellCheck.SC1073' />
+<error line='1' column='70' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.github/ISSUE&#95;TEMPLATE.md' >
+<error line='1' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='67' severity='error' message='Couldn&#39;t parse this redirection.' source='ShellCheck.SC1073' />
+<error line='1' column='67' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/README.md' >
+<error line='1' column='2' severity='error' message='You are missing a required space after the &#33;.' source='ShellCheck.SC1035' />
+<error line='1' column='2' severity='error' message='You need a space after the &#91; and before the &#93;.' source='ShellCheck.SC1035' />
+<error line='1' column='2' severity='error' message='Couldn&#39;t parse this test expression.' source='ShellCheck.SC1073' />
+<error line='1' column='26' severity='error' message='You need a space before the &#93;.' source='ShellCheck.SC1020' />
+<error line='1' column='26' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='26' severity='error' message='Missing space before &#93;. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/refs/heads/master' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/refs/remotes/origin/master' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/info/exclude' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/hooks/post&#45;update.sample' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/hooks/pre&#45;applypatch.sample' >
+<error line='11' column='1' severity='info' message='Not following&#58; git&#45;sh&#45;setup was not specified as input &#40;see shellcheck &#45;x&#41;.' source='ShellCheck.SC1091' />
+<error line='13' column='43' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/hooks/commit&#45;msg.sample' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/hooks/pre&#45;commit.sample' >
+<error line='31' column='7' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/hooks/applypatch&#45;msg.sample' >
+<error line='12' column='1' severity='info' message='Not following&#58; git&#45;sh&#45;setup was not specified as input &#40;see shellcheck &#45;x&#41;.' source='ShellCheck.SC1091' />
+<error line='14' column='43' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/hooks/pre&#45;rebase.sample' >
+<error line='19' column='1' severity='warning' message='basebranch appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='24' column='8' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='46' column='15' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='54' column='13' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='55' column='13' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='58' column='15' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='67' column='14' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/hooks/update.sample' >
+<error line='40' column='20' severity='warning' message='Prefer &#91; p &#93; &#124;&#124; &#91; q &#93; as &#91; p &#45;o q &#93; is not well defined.' source='ShellCheck.SC2166' />
+<error line='40' column='36' severity='warning' message='Prefer &#91; p &#93; &#124;&#124; &#91; q &#93; as &#91; p &#45;o q &#93; is not well defined.' source='ShellCheck.SC2166' />
+<error line='67' column='32' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='89' column='55' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='98' column='28' severity='warning' message='Prefer &#91; p &#93; &#38;&#38; &#91; q &#93; as &#91; p &#45;a q &#93; is not well defined.' source='ShellCheck.SC2166' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/hooks/pre&#45;push.sample' >
+<error line='22' column='1' severity='warning' message='remote appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='23' column='1' severity='warning' message='url appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='27' column='7' severity='info' message='read without &#45;r will mangle backslashes.' source='ShellCheck.SC2162' />
+<error line='27' column='32' severity='warning' message='remote&#95;ref appears unused. Verify it or export it.' source='ShellCheck.SC2034' />
+<error line='44' column='10' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/hooks/prepare&#45;commit&#45;msg.sample' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/description' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/HEAD' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/config' >
+<error line='1' column='1' severity='error' message='You need a space after the &#91; and before the &#93;.' source='ShellCheck.SC1035' />
+<error line='1' column='1' severity='error' message='Couldn&#39;t parse this test expression.' source='ShellCheck.SC1073' />
+<error line='1' column='6' severity='error' message='You need a space before the &#93;.' source='ShellCheck.SC1020' />
+<error line='1' column='6' severity='error' message='Missing space before &#93;. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/cd/b1a82fcdcbd1acab66880791d5e5b897f920cb' >
+<error line='1' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='24' severity='error' message='Couldn&#39;t parse this backtick expansion.' source='ShellCheck.SC1073' />
+<error line='2' column='25' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/cd/ee791b3946091be3c1270d86a937344d5c7e02' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/bd/b0cabc87cf50106df6e15097dff816c8c3eb34' >
+<error line='1' column='27' severity='info' message='The mentioned parser error was in this double quoted string.' source='ShellCheck.SC1009' />
+<error line='1' column='73' severity='error' message='Couldn&#39;t parse this backtick expansion.' source='ShellCheck.SC1073' />
+<error line='1' column='188' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/fa/3002fb52e1bd9b549373d317f93ce253743234' >
+<error line='1' column='11' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='113' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='194' severity='info' message='The mentioned parser error was in this double quoted string.' source='ShellCheck.SC1009' />
+<error line='2' column='23' severity='error' message='Couldn&#39;t parse this backtick expansion.' source='ShellCheck.SC1073' />
+<error line='4' column='50' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/67/7c4424f779ec6ba7a4bffb2f31309feaae40df' >
+<error line='1' column='3' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='44' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='3' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='43' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='46' severity='info' message='The mentioned parser error was in this redirection.' source='ShellCheck.SC1009' />
+<error line='3' column='90' severity='error' message='Couldn&#39;t parse this single quoted string.' source='ShellCheck.SC1073' />
+<error line='3' column='318' severity='error' message='Expected end of single quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/67/ed8765966e18cd11412b295a9a83ab721d0409' >
+<error line='1' column='51' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/96/374c4e7f13264096db3a2c31c27963ee5a6f2d' >
+<error line='1' column='3' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='214' severity='warning' message='This apostrophe terminated the single quoted string&#33;' source='ShellCheck.SC1011' />
+<error line='3' column='8' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/3f/4728b3236db36f9c4db91eadcdaad3372c36b7' >
+<error line='1' column='162' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/8d/c3fea025edd30f6aecf4c7c160ba573e82bb42' >
+<error line='1' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='52' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='52' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+<error line='1' column='53' severity='error' message='Trying to declare parameters&#63; Don&#39;t. Use &#40;&#41; and refer to params as &#36;1&#44; &#36;2..' source='ShellCheck.SC1065' />
+<error line='1' column='220' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='1' column='304' severity='error' message='Couldn&#39;t parse this single quoted string.' source='ShellCheck.SC1073' />
+<error line='1' column='399' severity='error' message='Expected end of single quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/15/896e942ef26466c100976c3aaf1ce1d1306ad6' >
+<error line='1' column='11' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='36' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/29/d162401f9c6b3977964076864e6846d506e6f0' >
+<error line='1' column='135' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/ae/33411f5692a4319e364ed9a8e8dab5aa9be589' >
+<error line='1' column='4' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='37' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='72' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/72/889e3034642bb503531b7552c9705c1d57ac7e' >
+<error line='1' column='27' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='48' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='48' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/b1/cd433e849e41edb63be2b0a983cad861804a29' >
+<error line='2' column='2' severity='error' message='You are missing a required space after the &#33;.' source='ShellCheck.SC1035' />
+<error line='2' column='95' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='2' column='95' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='2' column='99' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='3' column='38' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/99/617008ba8bee2e1af4f7da294dc0da43a5f0fa' >
+<error line='1' column='25' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='25' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/c7/46108d3a91424f3feb76d15771b50e3dda2c25' >
+<error line='1' column='46' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='48' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='53' severity='error' message='Couldn&#39;t parse this double quoted string.' source='ShellCheck.SC1073' />
+<error line='2' column='85' severity='error' message='Expected end of double quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/a1/b27f4a71419171bc2bc8e137ae01d5fac25b91' >
+<error line='1' column='76' severity='info' message='This &#92;&#0; will be a regular &#39;&#0;&#39; in this context.' source='ShellCheck.SC1001' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/4e/df0471a4812743e069fe50816dceb91da55b1f' >
+<error line='1' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='10' severity='error' message='Couldn&#39;t parse this backtick expansion.' source='ShellCheck.SC1073' />
+<error line='1' column='67' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/f6/a8ca31bb5202fa9253be7c08c8920675bad0c5' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/27/c6ab84b9ec52d624d7b5525cf73ad5365e9d51' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/8b/9967e53384a7b7ff6de21eae52127dce1a709e' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/e0/69fdc013422a7534c95f259de7ef405e47efb6' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/c0/7ce91f4e700315237e52fdbd6037e8a4cb2bab' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/4d/7a8a42fd98d31089568c7e6f82339378cf36ee' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/b8/be250fef0124d99da1299544a8f4e1bcad96bf' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/a6/08a230fc10efc6f96530efa37ce41ce03585d1' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/c2/8371f239cd7811dc947be8b928edcf365ebaf1' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/e6/2be6cdd1b2f3518babce5086112bff355f9c30' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/ff/25d16d72c106eef43a7296a4833e4df242b1cd' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/objects/ee/fdd0dcb91575b569a3dbae22dc7e5e28d0c79a' >
+<error line='1' column='32' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='37' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/index' >
+<error line='1' column='27' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='27' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/COMMIT&#95;EDITMSG' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/logs/refs/heads/master' >
+<error line='1' column='145' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='145' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/logs/refs/remotes/origin/master' >
+</file>
+<file name='/mnt/docker/development/docker&#45;baseimage&#45;alpine&#45;apache/.git/logs/HEAD' >
+<error line='1' column='145' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='145' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/nanorc' >
+</file>
+<file name='/mnt/docker/repos.txt' >
+</file>
+<file name='/mnt/docker/jenkins&#45;run.txt' >
+</file>
+<file name='/mnt/docker/cleanbuild.sh' >
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/LICENSE' >
+<error line='4' column='2' severity='error' message='Couldn&#39;t parse this function.' source='ShellCheck.SC1073' />
+<error line='4' column='13' severity='error' message='Trying to declare parameters&#63; Don&#39;t. Use &#40;&#41; and refer to params as &#36;1&#44; &#36;2..' source='ShellCheck.SC1065' />
+<error line='4' column='16' severity='error' message='Expected a &#123; to open the function definition.' source='ShellCheck.SC1064' />
+<error line='4' column='16' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/README.md' >
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/example.xml' >
+<error line='1' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='38' severity='error' message='Couldn&#39;t parse this redirection.' source='ShellCheck.SC1073' />
+<error line='1' column='38' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/21/c44702517635a162078571fc873758026498ff' >
+<error line='1' column='38' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='74' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/38/c8073968795d2fd57782f317582379ff63543d' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='15' severity='error' message='You need a space after the &#91; and before the &#93;.' source='ShellCheck.SC1035' />
+<error line='1' column='15' severity='error' message='Couldn&#39;t parse this test expression.' source='ShellCheck.SC1073' />
+<error line='1' column='247' severity='error' message='You are missing a required space here.' source='ShellCheck.SC1035' />
+<error line='1' column='255' severity='error' message='Expected test to end here &#40;don&#39;t wrap commands in &#91;&#93;/&#91;&#91;&#93;&#93;&#41;. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/d1/3668b0a7f8c06e07a7dca5f595d2184666dd24' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/e1/c0dea91fe3a5d7a07d397560d338416c855b77' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/c2/5cf36b84b0f3b0d806200a31c3a51f37a52b07' >
+<error line='2' column='21' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='49' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='118' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/c3/56c51a491049017a245b75e79be509c3f1fb42' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='42' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='59' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='59' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+<error line='1' column='129' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='166' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='1' column='195' severity='warning' message='Did you forget to close this double quoted string&#63;' source='ShellCheck.SC1078' />
+<error line='3' column='174' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='3' column='298' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='310' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='323' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='4' column='1' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='4' column='32' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/d7/f9863a1d18f326de6b051a0bcbf92d7e0a9a32' >
+<error line='1' column='3' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='11' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='40' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='57' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/7c/d1d34c4abc1ebf72e84fe81ce41c41493f8a59' >
+<error line='1' column='11' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='22' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/f4/c699c6f6d9b187f9734762b25ae056c1b608ec' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='199' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='1' column='314' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='3' column='306' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='3' column='306' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='4' column='10' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='4' column='27' severity='error' message='Couldn&#39;t parse this single quoted string.' source='ShellCheck.SC1073' />
+<error line='4' column='66' severity='error' message='Expected end of single quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/01/3a4bc614bcf7a60a2059d0fd7b9f37cd7c69bf' >
+<error line='3' column='56' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='66' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/cc/68a0776112fc5598000891bda67fd09f57f0f0' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/33/5a2b8846e28e96a62d7e0b4083f67a2ea59552' >
+<error line='1' column='35' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='133' severity='info' message='The mentioned parser error was in this redirection.' source='ShellCheck.SC1009' />
+<error line='1' column='140' severity='error' message='Couldn&#39;t parse this double quoted string.' source='ShellCheck.SC1073' />
+<error line='1' column='182' severity='error' message='Expected end of double quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/33/90dc50789ed2a05888040a99ab633f061983a4' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/c1/70781e829fdd879d6f10fc816b3d59deeb3853' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/af/f575437c79715454fe2a1c175b29bf18da34fd' >
+<error line='1' column='214' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='1' column='216' severity='error' message='You are missing a required space after the &#33;.' source='ShellCheck.SC1035' />
+<error line='1' column='216' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='1' column='234' severity='error' message='Couldn&#39;t parse this single quoted string.' source='ShellCheck.SC1073' />
+<error line='2' column='142' severity='error' message='Expected end of single quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+<error line='2' column='142' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/9f/f5a9d1d63a372a63d4e989804d74991302ab34' >
+<error line='1' column='3' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='23' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/bb/4d7d98d8085dd5884248dd10da354b2bc05a0b' >
+<error line='3' column='181' severity='warning' message='This apostrophe terminated the single quoted string&#33;' source='ShellCheck.SC1011' />
+<error line='3' column='238' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+<error line='4' column='39' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='4' column='65' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='4' column='82' severity='error' message='Couldn&#39;t parse this single quoted string.' source='ShellCheck.SC1073' />
+<error line='4' column='162' severity='error' message='Expected end of single quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+<error line='4' column='162' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/d3/b90d83076f11537df28c5a83bf48fb51837ee1' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='474' severity='info' message='This word is outside of quotes. Did you intend to &#39;nest &#39;&#34;&#39;single quotes&#39;&#34;&#39; instead&#39;&#63; ' source='ShellCheck.SC2026' />
+<error line='1' column='507' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/d3/07794d3133a89eab9a903e0902e762cb238191' >
+<error line='1' column='3' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='28' severity='warning' message='i is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='1' column='28' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='2' column='40' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='46' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='2' column='46' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/ed/2d061d66a85dd5ce749cd161174ec0f0b51006' >
+<error line='1' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='5' column='91' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='5' column='99' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='5' column='102' severity='error' message='Couldn&#39;t parse this backtick expansion.' source='ShellCheck.SC1073' />
+<error line='5' column='514' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/22/962e85e7daf03cf29581769bce87bf5b0ee4b4' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='33' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/b1/e860f705d3b8f2bf36b52e7fadda833d0244f6' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='39' severity='info' message='This &#92;3 will be a regular &#39;3&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='1' column='44' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='49' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='49' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+<error line='1' column='50' severity='error' message='Trying to declare parameters&#63; Don&#39;t. Use &#40;&#41; and refer to params as &#36;1&#44; &#36;2..' source='ShellCheck.SC1065' />
+<error line='1' column='70' severity='warning' message='Did you forget to close this double quoted string&#63;' source='ShellCheck.SC1078' />
+<error line='2' column='96' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/0c/07e7249ffe6312512eae5309274a722a04be8e' >
+<error line='1' column='31' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='57' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='57' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/0c/2cc6863cbb7a6a2b8faf6a0431784bc031775c' >
+<error line='1' column='12' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='1' column='49' severity='warning' message='Did you forget to close this double quoted string&#63;' source='ShellCheck.SC1078' />
+<error line='2' column='1' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='3' column='8' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='8' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/a3/851fa972883b308ef605ad1cb9926446fa5283' >
+<error line='1' column='22' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='22' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/60/b566bb3a6421d4cd9820918eb9b0ccee3ea8be' >
+<error line='1' column='21' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='1' column='35' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='1' column='35' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='1' column='80' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='1' column='92' severity='info' message='This &#92;T will be a regular &#39;T&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='1' column='108' severity='info' message='This &#92;T will be a regular &#39;T&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='1' column='110' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='2' column='73' severity='warning' message='This apostrophe terminated the single quoted string&#33;' source='ShellCheck.SC1011' />
+<error line='2' column='103' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='2' column='233' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='3' column='11' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='3' column='14' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='20' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='3' column='88' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='145' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='3' column='145' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='3' column='227' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='3' column='235' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='235' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/81/e25664cd12ae02495d280d6fff45e8d5d2ea5a' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='8' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='2' column='8' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/1b/03705f81d959f86169b9df00138b9c40873aad' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='15' severity='error' message='You need a space after the &#91; and before the &#93;.' source='ShellCheck.SC1035' />
+<error line='1' column='28' severity='error' message='You are missing a required space here.' source='ShellCheck.SC1035' />
+<error line='2' column='126' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='2' column='134' severity='error' message='Couldn&#39;t parse this double quoted string.' source='ShellCheck.SC1073' />
+<error line='2' column='190' severity='error' message='Expected end of double quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+<error line='2' column='190' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/1b/755e6c9279a94d9b8800509f75f64de0158336' >
+<error line='1' column='3' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='58' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/1b/01301dc489facb7884245a62cdd3e1a1220123' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/a8/8c4703d19cd67a397fc0764d681ad126cf9526' >
+<error line='1' column='42' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/23/fc2c374a2ab912585b468dbef4d570c0adf2ea' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/23/ee1869e4634e0b32e28174776f4dc67ee3fe3a' >
+<error line='1' column='117' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='146' severity='info' message='The mentioned parser error was in this redirection.' source='ShellCheck.SC1009' />
+<error line='1' column='165' severity='error' message='Couldn&#39;t parse this backtick expansion.' source='ShellCheck.SC1073' />
+<error line='2' column='39' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/b9/04c078675fd2ca4ed095697856768adbb9bd85' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='58' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/61/fbf13514c07a3235dc88bc6ebd0b49a48f7fc1' >
+<error line='1' column='30' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='1' column='36' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='75' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='97' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='1' column='97' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='2' column='35' severity='info' message='This &#92;p will be a regular &#39;p&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='2' column='54' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='68' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='78' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/61/c260cc75785e3e3a8375d18f064dd87ed77024' >
+<error line='1' column='25' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='25' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/98/924c5a0bb7e10c0d0137504783d6c8b4f0581d' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='149' severity='warning' message='This apostrophe terminated the single quoted string&#33;' source='ShellCheck.SC1011' />
+<error line='1' column='166' severity='warning' message='Did you forget to close this single quoted string&#63;' source='ShellCheck.SC1078' />
+<error line='2' column='155' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='2' column='168' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/c8/fcc1c006fe6365708267fd394d552a55df5b1a' >
+<error line='1' column='31' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='31' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/77/77d98e8a3cfc247ffc2e54d1705e61e256b84f' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/28/0235a97ffaa235cacaca67c2647f7f0af703bb' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/28/c30f3b178efd22f027062c589bf431b2125a80' >
+<error line='2' column='1' severity='info' message='The mentioned parser error was in this simple command.' source='ShellCheck.SC1009' />
+<error line='2' column='12' severity='error' message='Couldn&#39;t parse this single quoted string.' source='ShellCheck.SC1073' />
+<error line='2' column='160' severity='error' message='Expected end of single quoted string. Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/18/b0908dcfd7860752e9c8092a843ccfa528a08e' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/25/376f0da3f68e24cb592074738c14f0a83ac86a' >
+<error line='2' column='46' severity='error' message='Parsing stopped here. Mismatched keywords or invalid parentheses&#63;' source='ShellCheck.SC1070' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/6f/9c1a19142c6811c14382819066bc4f602b81e6' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='71' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='113' severity='info' message='This &#92;&#208; will be a regular &#39;&#208;&#39; in this context.' source='ShellCheck.SC1001' />
+<error line='1' column='169' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='1' column='180' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='2' column='37' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='82' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='2' column='82' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/8b/e346f13f6271eddf9cd1d0818d4b548944924f' >
+<error line='3' column='199' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='3' column='199' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+<error line='3' column='214' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/51/8ca5bc01475963315d573a3f2822531a51d088' >
+<error line='2' column='21' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='4' column='15' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='4' column='15' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/56/e996e0c463dd3873c1c019a7672a6bfd1dc65a' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='6' column='35' severity='warning' message='This apostrophe terminated the single quoted string&#33;' source='ShellCheck.SC1011' />
+<error line='6' column='42' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/2a/c69090e8affc267353c1e8b2bbc5e5e692c9e0' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/5b/39c3672a0ef88acdca51725037d8e89b69ff26' >
+<error line='1' column='26' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='2' column='6' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/4d/519a75bd8b61e59317078778e055858070fb7e' >
+<error line='1' column='13' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/b4/b8007a903ad2a55cf76b7c42be63cc4459721f' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='16' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/b4/b4d0c5f56117e3059d0b455a84b72a82ba0c4a' >
+<error line='1' column='3' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='45' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='1' column='75' severity='warning' message='Did you forget to close this single quoted string&#63;' source='ShellCheck.SC1078' />
+<error line='4' column='229' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='4' column='264' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/ec/8aca5009a9598fc1113b0febb69eca9131a895' >
+<error line='3' column='283' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='300' severity='warning' message='Did you forget to close this double quoted string&#63;' source='ShellCheck.SC1078' />
+<error line='4' column='46' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+<error line='4' column='54' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/e6/cfbc7a4b3752b71bd8df440bb2374a0fd300a1' >
+<error line='1' column='36' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='69' severity='warning' message='e is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='1' column='69' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='1' column='94' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='1' column='94' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/70/22e5b818e6f0deba7a501394b94400dead2231' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='72' severity='warning' message='Did you forget to close this backtick expansion&#63;' source='ShellCheck.SC1078' />
+<error line='1' column='72' severity='info' message='The mentioned parser error was in this backtick expansion.' source='ShellCheck.SC1009' />
+<error line='1' column='84' severity='error' message='Couldn&#39;t parse this brace group.' source='ShellCheck.SC1073' />
+<error line='1' column='85' severity='error' message='You need a space after the &#39;&#123;&#39;.' source='ShellCheck.SC1054' />
+<error line='1' column='111' severity='error' message='Expected a &#39;&#125;&#39;. If you have one&#44; try a &#59; or &#92;n in front of it.' source='ShellCheck.SC1056' />
+<error line='1' column='113' severity='error' message='Unexpected . Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+<error line='2' column='94' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='2' column='94' severity='info' message='This is actually an end quote&#44; but due to next char it looks suspect.' source='ShellCheck.SC1079' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/70/b4178419822fd88faf443d898ff6bc3e8c2cb3' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='166' severity='warning' message='b is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='1' column='248' severity='warning' message='e is referenced but not assigned.' source='ShellCheck.SC2154' />
+<error line='1' column='248' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='2' column='7' severity='info' message='Double quote to prevent globbing and word splitting.' source='ShellCheck.SC2086' />
+<error line='2' column='63' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='2' column='94' severity='error' message='&#39;&#40;&#39; is invalid here. Did you forget to escape it&#63;' source='ShellCheck.SC1036' />
+<error line='2' column='94' severity='error' message='Parsing stopped here. Invalid use of parentheses&#63;' source='ShellCheck.SC1088' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/70/3e67e6f58bff5ccf6532369d2a9846878a8c68' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='17' severity='error' message=' Fix any mentioned problems and try again.' source='ShellCheck.SC1072' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/d9/9d0d5c22460a57d157b2192ff69832e61be5c7' >
+<error line='1' column='5' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='43' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='1' column='80' severity='warning' message='This &#125; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='2' column='183' severity='warning' message='Quote this to prevent word splitting.' source='ShellCheck.SC2046' />
+<error line='2' column='183' severity='info' message='Use &#36;&#40;..&#41; instead of legacy &#96;..&#96;.' source='ShellCheck.SC2006' />
+<error line='2' column='199' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='3' column='9' severity='warning' message='This &#123; is literal. Check expression &#40;missing &#59;/&#92;n&#63;&#41; or quote it.' source='ShellCheck.SC1083' />
+<error line='3' column='24' severity='error' message='For command expansion&#44; the tick should slant left &#40;&#96; vs &#180;&#41;. Use &#36;&#40;..&#41; instead.' source='ShellCheck.SC1077' />
+<error line='3' column='26' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='3' column='53' severity='error' message='This is a unicode non&#45;breaking space. Delete and retype it.' source='ShellCheck.SC1018' />
+<error line='3' column='68' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/d9/a6f577039ed9020d19a231e3657fb63d2229ba' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/d9/01e515ff41411f604fd510fc0624b9da75f79a' >
+<error line='1' column='4' severity='error' message='Parsing stopped here. Is this keyword correctly matched up&#63;' source='ShellCheck.SC1089' />
+</file>
+<file name='/mnt/docker/templates/docker&#45;templates/.git/objects/pack/pack&#45;d0b08100c619806da794ad58188a508b61aa75c3.pack' >
+^Cfind: 'shellcheck' terminated by signal 2

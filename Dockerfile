@@ -8,24 +8,19 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 
 # environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
-ENV TERM="xterm" LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="C"
-
-# Set the locale
-RUN locale-gen en_US.UTF-8
-
+ENV TERM="xterm" LANG="en_US" LANGUAGE="en_US:en"
 
 # build packages as variable
 ARG BUILD_PACKAGES="\
 	cabal-install \
 	git"
 
-# install runtime packages
+# Set the locale
 RUN \
- apt-get update && \
- apt-get install -y \
-	tzdata && \
+ locale-gen en_US && \
 
 # install build packages
+ apt-get update && \
  apt-get install -y \
 	$BUILD_PACKAGES && \
 
