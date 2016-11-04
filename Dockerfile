@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM alpine:3.4
 MAINTAINER sparklyballs
 
 # set version label
@@ -6,42 +6,9 @@ ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
-# environment variables
-ARG DEBIAN_FRONTEND="noninteractive"
-ENV TERM="xterm" LANG="en_US" LANGUAGE="en_US:en"
+COPY package/bin/shellcheck /usr/local/bin/
+COPY package/lib/           /usr/local/lib/
 
-# build packages as variable
-ARG BUILD_PACKAGES="\
-	cabal-install \
-	git"
+RUN ldconfig /usr/local/lib
 
-# Set the locale
-RUN \
- locale-gen en_US && \
 
-# install build packages
- apt-get update && \
- apt-get install -y \
-	$BUILD_PACKAGES && \
-
-# compile shellcheck
- cabal update && \
- git clone https://github.com/koalaman/shellcheck \
-	/tmp/shellcheck && \
- cd /tmp/shellcheck && \
- cabal install && \
- export OLDPATH="$PATH" && \
- export PATH="/root/.cabal/bin:$PATH" && \
- cp $(which shellcheck) /usr/local/bin/ && \
- ldd $(which shellcheck) | grep "=> /" | awk '{print $3}' | xargs -I '{}' cp -v '{}' /usr/local/lib/ && \
- export PATH="$OLDPATH" && \
- ldconfig /usr/local/lib && \
-
-# cleanup
- apt-get purge -y --auto-remove \
-	$BUILD_PACKAGES && \
- rm -rf \
-	/root/.cabal \
-	/tmp/* \
-	/var/lib/apt/lists/* \
-	/var/tmp/*
