@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:edge
 MAINTAINER sparklyballs
 
 # set version label
@@ -12,9 +12,6 @@ COPY mitch.tishmack@gmail.com-55881c97.rsa.pub /etc/apk/keys/mitch.tishmack@gmai
 # install packages
 RUN \
  echo "https://s3-us-west-2.amazonaws.com/alpine-ghc/next/8.0" >> /etc/apk/repositories && \
- apk add --no-cache --virtual=build-dependencies \
- 	--repository http://nl.alpinelinux.org/alpine/edge/community \
-	llvm3.7 && \
  apk add --no-cache --virtual=build-dependencies \
 	bash \
 	binutils \
