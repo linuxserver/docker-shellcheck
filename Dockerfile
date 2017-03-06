@@ -1,46 +1,38 @@
 FROM alpine:edge
-MAINTAINER sparklyballs
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
-# copy apk key
-COPY mitch.tishmack@gmail.com-55881c97.rsa.pub /etc/apk/keys/mitch.tishmack@gmail.com-55881c97.rsa.pub
-
-# install packages
+# install build packages
 RUN \
- echo "https://s3-us-west-2.amazonaws.com/alpine-ghc/next/8.0" >> /etc/apk/repositories && \
  apk add --no-cache --virtual=build-dependencies \
-	bash \
-	binutils \
+	--repository http://nl.alpinelinux.org/alpine/edge/testing \
 	cabal \
-	g++ \
-	gcc \
-	ghc \
-	ghc-dev \
-	git \
-	make \
-	stack && \
+	ghc && \
 
-# update cabal and stack
- cabal \
-	update && \
- stack \
-	update && \
+ apk add --no-cache --virtual=build-dependencies \
+	libffi-dev \
+	musl-dev && \
 
-# compile shellcheck
+# compile shellcheck
+ cabal update && \
  cabal install ShellCheck && \
+
+# install shellcheck
  cp /root/.cabal/bin/shellcheck /usr/local/bin/ && \
- ldd /root/.cabal/bin/shellcheck | grep "=> /" | awk '{print $3}' | xargs -I '{}' cp -v '{}'  /usr/local/lib/ && \
+ ldd \
+	/root/.cabal/bin/shellcheck | grep "=> /" \
+	| awk '{print $3}' | xargs -I '{}' cp -v '{}'  \
+	/usr/local/lib/ && \
  ldconfig /usr/local/lib && \
 
-# clean up
+# cleanup
  apk del --purge \
 	build-dependencies && \
- rm -rf \
+rm -rf \
+	/root \
 	/tmp/* && \
- find /root -name . -o -prune -exec rm -rf -- {} + && \
  mkdir -p \
 	/root
