@@ -1,4 +1,5 @@
-FROM alpine:edge
+FROM scratch
+ADD rootfs.tar.gz /
 
 # set version label
 ARG BUILD_DATE
@@ -9,6 +10,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 RUN \
  apk add --no-cache --virtual=build-dependencies \
 	--repository http://nl.alpinelinux.org/alpine/edge/testing \
+	binutils-gold \
 	cabal \
 	ghc && \
 
