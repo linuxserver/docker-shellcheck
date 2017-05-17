@@ -11,9 +11,10 @@ RUN \
  apk add --no-cache --virtual=build-dependencies \
 	--repository http://nl.alpinelinux.org/alpine/edge/testing \
 	binutils-gold \
-	cabal \
+	cabal && \
+ apk add --no-cache --virtual=build-dependencies \
+	--repository http://nl.alpinelinux.org/alpine/edge/community \
 	ghc && \
-
  apk add --no-cache --virtual=build-dependencies \
 	libffi-dev \
 	musl-dev && \
