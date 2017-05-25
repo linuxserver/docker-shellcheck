@@ -9,15 +9,13 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 # install build packages
 RUN \
  apk add --no-cache --virtual=build-dependencies \
-	--repository http://nl.alpinelinux.org/alpine/edge/testing \
 	binutils-gold \
-	cabal && \
- apk add --no-cache --virtual=build-dependencies \
-	--repository http://nl.alpinelinux.org/alpine/edge/community \
-	ghc && \
- apk add --no-cache --virtual=build-dependencies \
+	ghc \
 	libffi-dev \
 	musl-dev && \
+ apk add --no-cache --virtual=build-dependencies \
+	--repository http://nl.alpinelinux.org/alpine/edge/testing \
+	cabal && \
 
 # compile shellcheck
  cabal update && \
