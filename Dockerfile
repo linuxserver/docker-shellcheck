@@ -14,7 +14,7 @@ RUN \
 	libffi-dev \
 	musl-dev && \
  apk add --no-cache --virtual=build-dependencies \
-	--repository http://nl.alpinelinux.org/alpine/edge/testing \
+	--repository http://nl.alpinelinux.org/alpine/edge/community \
 	cabal && \
 
 # compile shellcheck
