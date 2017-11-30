@@ -11,6 +11,7 @@ RUN \
  apk add --no-cache --virtual=build-dependencies \
 	binutils-gold \
 	ghc \
+	git \
 	libffi-dev \
 	musl-dev && \
  apk add --no-cache --virtual=build-dependencies \
@@ -18,8 +19,10 @@ RUN \
 	cabal && \
 
 # compile shellcheck
+ git clone https://github.com/koalaman/shellcheck /tmp/shellcheck && \
+ cd /tmp/shellcheck && \
  cabal update && \
- cabal install ShellCheck && \
+ cabal install && \
 
 # install shellcheck
  cp /root/.cabal/bin/shellcheck /usr/local/bin/ && \
