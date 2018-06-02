@@ -1,28 +1,25 @@
 ############## build stage ##############
-FROM scratch as buildstage
-ADD rootfs.tar.xz /
+FROM ubuntu as buildstage
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
+# build environment settings
+ARG DEBIAN_FRONTEND="noninteractive"
+
 # package versions
 ARG SHELLCHECK_VER="0.5.0"
 
 RUN \
  echo "**** install build packages ****" && \
- apk add --no-cache --virtual=build-dependencies \
-	binutils-gold \
+ apt-get update && \
+	apt-get install -y \
+	cabal-install \
 	curl \
 	ghc \
-	git \
-	libffi-dev \
-	musl-dev \
-	tar && \
- apk add --no-cache --virtual=build-dependencies \
-	--repository http://nl.alpinelinux.org/alpine/edge/community \
-	cabal && \
+	git && \
  echo "**** compile shellcheck ****" && \
  mkdir -p \
 	/tmp/shellcheck && \
@@ -33,13 +30,16 @@ RUN \
 	/tmp/shellcheck --strip-components=1 && \
  cd /tmp/shellcheck && \
  cabal update && \
- cabal install && \
- echo "**** install shellcheck in buildstage ****" && \
- cp /root/.cabal/bin/shellcheck /usr/local/bin/ && \
- ldd \
-	/root/.cabal/bin/shellcheck | grep "=> /" \
-	| awk '{print $3}' | xargs -I '{}' cp -v '{}'  \
-	/usr/local/lib/
+ cabal install --dependencies-only && \
+ cabal build Paths_ShellCheck && \
+ ghc \
+	-idist/build/autogen \
+	-isrc \
+	-optl-pthread \
+	-optl-static \
+	--make \
+	shellcheck && \
+ strip --strip-all shellcheck
 
 ############## runtime stage ##############
 FROM scratch
@@ -51,5 +51,4 @@ ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
 # copy files from build stage
-COPY --from=buildstage /usr/local/ /usr/local/
-# RUN ldconfig /usr/local/lib
+COPY --from=buildstage /tmp/shellcheck/shellcheck /usr/local/bin/
