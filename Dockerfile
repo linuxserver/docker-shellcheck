@@ -9,25 +9,16 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 # build environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
 
-# package versions
-ARG SHELLCHECK_VER="0.5.0"
-
 RUN \
  echo "**** install build packages ****" && \
  apt-get update && \
-	apt-get install -y \
+ apt-get install -y \
 	cabal-install \
 	curl \
 	ghc \
 	git && \
  echo "**** compile shellcheck ****" && \
- mkdir -p \
-	/tmp/shellcheck && \
- curl -o \
- /tmp/shellcheck-src.tar.gz -L \
-	"https://github.com/koalaman/shellcheck/archive/v$SHELLCHECK_VER.tar.gz" && \
- tar xf /tmp/shellcheck-src.tar.gz -C \
-	/tmp/shellcheck --strip-components=1 && \
+ git clone https://github.com/koalaman/shellcheck /tmp/shellcheck && \
  cd /tmp/shellcheck && \
  cabal update && \
  cabal install --dependencies-only && \
