@@ -50,12 +50,12 @@ fi
 if [[ -d "${WORKSPACE}"/root/etc/cont-init.d || -d "${WORKSPACE}"/root/etc/services.d || \
 -d "${WORKSPACE}"/init  || -d "${WORKSPACE}"/services ]];then
 
-docker pull lsiodev/shellcheck
+docker pull ghcr.io/linuxserver/lsiodev-shellcheck
 
 docker run \
 	--rm=true -t \
 	${MOUNT_OPTIONS} \
-	lsiodev/shellcheck \
+	ghcr.io/linuxserver/lsiodev-shellcheck \
 	find ${TEST_AREA} -type f -exec shellcheck ${SHELLCHECK_OPTIONS} {} + \
 	> ${WORKSPACE}/shellcheck-result.xml
 
