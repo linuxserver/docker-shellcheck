@@ -3,7 +3,7 @@
 # clear preexisting variables not set by job
 unset MOUNT_OPTIONS TEST_AREA LINT_ARCH SHELLCHECK_OPTIONS
 
-# clear preexising checkstyle files
+# clear preexisting checkstyle files
 [[ -f "${WORKSPACE}"/shellcheck-result.xml ]] && rm "${WORKSPACE}"/shellcheck-result.xml
 
 # check for common locations and exit if not found
