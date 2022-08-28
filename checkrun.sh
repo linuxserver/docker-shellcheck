@@ -31,9 +31,9 @@ if [[ -d "${WORKSPACE}"/root/etc/services.d ]]; then
     TEST_AREA+=("root/etc/services.d")
 fi
 
-if [[ -d "${WORKSPACE}"/root/docker-mods,root/etc/s6-overlay/s6-rc.d/ ]]; then
-    MOUNT_OPTIONS+=("-v ${WORKSPACE}/root/docker-mods,root/etc/s6-overlay/s6-rc.d/:/root/docker-mods,root/etc/s6-overlay/s6-rc.d/")
-    TEST_AREA+=("root/docker-mods,root/etc/s6-overlay/s6-rc.d/")
+if [[ -d "${WORKSPACE}"/root/etc/s6-overlay/s6-rc.d/ ]]; then
+    MOUNT_OPTIONS+=("-v ${WORKSPACE}/root/etc/s6-overlay/s6-rc.d/:/root/etc/s6-overlay/s6-rc.d/")
+    TEST_AREA+=("root/etc/s6-overlay/s6-rc.d/")
 fi
 
 # check test area for executable files
