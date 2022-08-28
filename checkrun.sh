@@ -12,27 +12,27 @@ MOUNT_OPTIONS=()
 TEST_AREA=()
 
 if [[ -d "${WORKSPACE}"/init ]]; then
-    MOUNT_OPTIONS+=("-v ${WORKSPACE}/init:/init")
+    MOUNT_OPTIONS+=("-v" "${WORKSPACE}/init:/init")
     TEST_AREA+=("init")
 fi
 
 if [[ -d "${WORKSPACE}"/services ]]; then
-    MOUNT_OPTIONS+=("-v ${WORKSPACE}/services:/services")
+    MOUNT_OPTIONS+=("-v" "${WORKSPACE}/services:/services")
     TEST_AREA+=("services")
 fi
 
 if [[ -d "${WORKSPACE}"/root/etc/cont-init.d ]]; then
-    MOUNT_OPTIONS+=("-v ${WORKSPACE}/root/etc/cont-init.d:/root/etc/cont-init.d")
+    MOUNT_OPTIONS+=("-v" "${WORKSPACE}/root/etc/cont-init.d:/root/etc/cont-init.d")
     TEST_AREA+=("root/etc/cont-init.d")
 fi
 
 if [[ -d "${WORKSPACE}"/root/etc/services.d ]]; then
-    MOUNT_OPTIONS+=("-v ${WORKSPACE}/root/etc/services.d:/root/etc/services.d")
+    MOUNT_OPTIONS+=("-v" "${WORKSPACE}/root/etc/services.d:/root/etc/services.d")
     TEST_AREA+=("root/etc/services.d")
 fi
 
 if [[ -d "${WORKSPACE}"/root/etc/s6-overlay/s6-rc.d ]]; then
-    MOUNT_OPTIONS+=("-v ${WORKSPACE}/root/etc/s6-overlay/s6-rc.d:/root/etc/s6-overlay/s6-rc.d")
+    MOUNT_OPTIONS+=("-v" "${WORKSPACE}/root/etc/s6-overlay/s6-rc.d:/root/etc/s6-overlay/s6-rc.d")
     TEST_AREA+=("root/etc/s6-overlay/s6-rc.d")
 fi
 
