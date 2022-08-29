@@ -64,13 +64,22 @@ fi
 
 # run shellcheck
 docker pull ghcr.io/linuxserver/lsiodev-shellcheck
-
 docker run \
     --rm=true -t \
     "${MOUNT_OPTIONS[@]}" \
     ghcr.io/linuxserver/lsiodev-shellcheck \
     find "${EXECUTABLE_FILES[@]}" -exec shellcheck "${SHELLCHECK_OPTIONS[@]}" {} + \
     >"${WORKSPACE}"/shellcheck-result.xml
+
+# consider using official shellcheck image
+# docker pull koalaman/shellcheck:stable
+# find "${EXECUTABLE_FILES[@]}" -exec \
+#     docker run \
+#         --rm -t \
+#         "${MOUNT_OPTIONS[@]}" \
+#         koalaman/shellcheck:stable \
+#         "${SHELLCHECK_OPTIONS[@]}" {} + \
+#         >"${WORKSPACE}"/shellcheck-result.xml
 
 if [[ ! -f ${WORKSPACE}/shellcheck-result.xml ]]; then
     echo "<?xml version='1.0' encoding='UTF-8'?><checkstyle version='4.3'></checkstyle>" >"${WORKSPACE}"/shellcheck-result.xml
