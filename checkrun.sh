@@ -1,15 +1,22 @@
 #!/bin/bash
 
 # clear preexisting variables not set by job
-unset MOUNT_OPTIONS TEST_AREA LINT_ARCH SHELLCHECK_OPTIONS
-
-# clear preexising checkstyle files
-[[ -f "${WORKSPACE}"/shellcheck-result.xml ]] && rm "${WORKSPACE}"/shellcheck-result.xml
+unset EXECUTABLE_FILES MOUNT_OPTIONS NON_EXECUTABLE_FILES SHELLCHECK_OPTIONS SHELLCKECK_IMAGE TEST_AREA
 
 # initialize variables
-SHELLCHECK_OPTIONS=("--exclude=SC1008" "--format=checkstyle" "--shell=bash")
+EXECUTABLE_FILES=()
 MOUNT_OPTIONS=()
+NON_EXECUTABLE_FILES=()
+SHELLCHECK_OPTIONS=("--exclude=SC1008" "--format=checkstyle" "--shell=bash")
+SHELLCKECK_IMAGE="ghcr.io/linuxserver/lsiodev-shellcheck"
+# consider using official shellcheck image
+#SHELLCKECK_IMAGE="koalaman/shellcheck:stable"
 TEST_AREA=()
+
+# clear preexising checkstyle files
+if [[ -f "${WORKSPACE}"/shellcheck-result.xml ]]; then
+    rm "${WORKSPACE}"/shellcheck-result.xml
+fi
 
 if [[ -d "${WORKSPACE}"/init ]]; then
     MOUNT_OPTIONS+=("-v" "${WORKSPACE}/init:/init")
@@ -37,8 +44,6 @@ if [[ -d "${WORKSPACE}"/root/etc/s6-overlay/s6-rc.d ]]; then
 fi
 
 # check test area for executable files
-EXECUTABLE_FILES=()
-NON_EXECUTABLE_FILES=()
 while IFS= read -r -d '' file; do
     if head -n1 "${file}" | grep -q -E -w "sh|bash|dash|ksh"; then
         if [[ -x "${file}" ]]; then
@@ -63,23 +68,13 @@ if [[ ${#EXECUTABLE_FILES[@]} -eq 0 ]]; then
 fi
 
 # run shellcheck
-docker pull ghcr.io/linuxserver/lsiodev-shellcheck
-docker run \
-    --rm=true -t \
+docker pull "${SHELLCKECK_IMAGE}"
+find "${EXECUTABLE_FILES[@]}" -exec \
+    docker run --rm -t \
     "${MOUNT_OPTIONS[@]}" \
-    ghcr.io/linuxserver/lsiodev-shellcheck \
-    find "${EXECUTABLE_FILES[@]}" -exec shellcheck "${SHELLCHECK_OPTIONS[@]}" {} + \
+    "${SHELLCKECK_IMAGE}" \
+    "${SHELLCHECK_OPTIONS[@]}" {} + \
     >"${WORKSPACE}"/shellcheck-result.xml
-
-# consider using official shellcheck image
-# docker pull koalaman/shellcheck:stable
-# find "${EXECUTABLE_FILES[@]}" -exec \
-#     docker run \
-#         --rm -t \
-#         "${MOUNT_OPTIONS[@]}" \
-#         koalaman/shellcheck:stable \
-#         "${SHELLCHECK_OPTIONS[@]}" {} + \
-#         >"${WORKSPACE}"/shellcheck-result.xml
 
 if [[ ! -f ${WORKSPACE}/shellcheck-result.xml ]]; then
     echo "<?xml version='1.0' encoding='UTF-8'?><checkstyle version='4.3'></checkstyle>" >"${WORKSPACE}"/shellcheck-result.xml
