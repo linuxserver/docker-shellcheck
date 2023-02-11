@@ -69,6 +69,9 @@ fi
 
 # run shellcheck
 docker pull "${SHELLCKECK_IMAGE}"
+docker run --rm -t \
+    "${SHELLCKECK_IMAGE}" \
+    shellcheck --version
 find "${EXECUTABLE_FILES[@]}" -exec \
     docker run --rm -t \
     "${MOUNT_OPTIONS[@]}" \
