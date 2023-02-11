@@ -76,6 +76,7 @@ find "${EXECUTABLE_FILES[@]}" -exec \
     docker run --rm -t \
     "${MOUNT_OPTIONS[@]}" \
     "${SHELLCKECK_IMAGE}" \
+    shellcheck \
     "${SHELLCHECK_OPTIONS[@]}" {} + \
     >"${WORKSPACE}"/shellcheck-result.xml
 
