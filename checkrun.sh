@@ -1,67 +1,82 @@
 #!/bin/bash
 
 # clear preexisting variables not set by job
-unset MOUNT_OPTIONS TEST_AREA LINT_ARCH SHELLCHECK_OPTIONS
+unset ALL_SHELL_FILES EXECUTABLE_FILES MOUNT_OPTIONS NON_EXECUTABLE_FILES SHELLCHECK_OPTIONS SHELLCKECK_IMAGE TEST_AREA
+
+# initialize variables
+ALL_SHELL_FILES=()
+EXECUTABLE_FILES=()
+MOUNT_OPTIONS=()
+NON_EXECUTABLE_FILES=()
+SHELLCHECK_OPTIONS=("--exclude=SC1008" "--format=checkstyle" "--shell=bash")
+SHELLCKECK_IMAGE="koalaman/shellcheck:stable"
+TEST_AREA=()
 
 # clear preexising checkstyle files
-[[ -f "${WORKSPACE}"/shellcheck-result.xml ]] && rm "${WORKSPACE}"/shellcheck-result.xml
+echo "<?xml version='1.0' encoding='UTF-8'?><checkstyle version='4.3'></checkstyle>" >"${WORKSPACE}"/shellcheck-result.xml
 
-# check for common locations and exit if not found
-if [[ ! -d "${WORKSPACE}"/root/etc/cont-init.d  && ! -d "${WORKSPACE}"/root/etc/services.d && \
-! -d "${WORKSPACE}"/init  && ! -d "${WORKSPACE}"/services ]]; then
-echo "no common files found, linting not required" exit 0
+if [[ -d "${WORKSPACE}"/init ]]; then
+    MOUNT_OPTIONS+=("-v" "${WORKSPACE}/init:/init")
+    TEST_AREA+=("init")
 fi
 
-if [[ ! -d "${WORKSPACE}"/root/etc/cont-init.d  && ! -d "${WORKSPACE}"/root/etc/services.d ]] && \
-[[ -d "${WORKSPACE}"/init && -d "${WORKSPACE}"/services ]]; then
-SHELLCHECK_OPTIONS="--format=checkstyle --shell=bash"
-MOUNT_OPTIONS="-v ${WORKSPACE}/init:/init -v ${WORKSPACE}/services:/services"
-TEST_AREA="init services"
+if [[ -d "${WORKSPACE}"/services ]]; then
+    MOUNT_OPTIONS+=("-v" "${WORKSPACE}/services:/services")
+    TEST_AREA+=("services")
+fi
 
-elif [[ ! -d "${WORKSPACE}"/root/etc/cont-init.d  && ! -d "${WORKSPACE}"/root/etc/services.d ]] && \
-[[ ! -d "${WORKSPACE}"/init && -d "${WORKSPACE}"/services ]]; then
-SHELLCHECK_OPTIONS="--format=checkstyle --shell=bash"
-MOUNT_OPTIONS="-v ${WORKSPACE}/services:/services"
-TEST_AREA="services"
+if [[ -d "${WORKSPACE}"/root/etc/cont-init.d ]]; then
+    MOUNT_OPTIONS+=("-v" "${WORKSPACE}/root/etc/cont-init.d:/root/etc/cont-init.d")
+    TEST_AREA+=("root/etc/cont-init.d")
+fi
 
-elif [[ ! -d "${WORKSPACE}"/root/etc/cont-init.d  && ! -d "${WORKSPACE}"/root/etc/services.d ]] && \
-[[ -d "${WORKSPACE}"/init && ! -d "${WORKSPACE}"/services ]]; then
-SHELLCHECK_OPTIONS="--format=checkstyle --shell=bash"
-MOUNT_OPTIONS="-v ${WORKSPACE}/init:/init"
-TEST_AREA="init"
+if [[ -d "${WORKSPACE}"/root/etc/services.d ]]; then
+    MOUNT_OPTIONS+=("-v" "${WORKSPACE}/root/etc/services.d:/root/etc/services.d")
+    TEST_AREA+=("root/etc/services.d")
+fi
 
-elif [[ -d "${WORKSPACE}"/root/etc/cont-init.d  && -d "${WORKSPACE}"/root/etc/services.d ]]; then
-SHELLCHECK_OPTIONS="--exclude=SC1008 --format=checkstyle --shell=bash"
-MOUNT_OPTIONS="-v ${WORKSPACE}/root:/root"
-TEST_AREA="root/etc/services.d root/etc/cont-init.d"
+if [[ -d "${WORKSPACE}"/root/etc/s6-overlay/s6-rc.d ]]; then
+    MOUNT_OPTIONS+=("-v" "${WORKSPACE}/root/etc/s6-overlay/s6-rc.d:/root/etc/s6-overlay/s6-rc.d")
+    TEST_AREA+=("root/etc/s6-overlay/s6-rc.d")
+fi
 
-elif [[ ! -d "${WORKSPACE}"/root/etc/cont-init.d  && -d "${WORKSPACE}"/root/etc/services.d ]]; then
-SHELLCHECK_OPTIONS="--exclude=SC1008 --format=checkstyle --shell=bash"
-MOUNT_OPTIONS="-v ${WORKSPACE}/root:/root"
-TEST_AREA="root/etc/services.d"
+# check test area for executable files
+while IFS= read -r -d '' file; do
+    if head -n1 "${file}" | grep -q -E -w "sh|bash|dash|ksh"; then
+        ALL_SHELL_FILES+=("${file}")
+        if [[ -x "${file}" ]]; then
+            EXECUTABLE_FILES+=("${file}")
+        else
+            NON_EXECUTABLE_FILES+=("${file}")
+        fi
+    fi
+done < <(find "${TEST_AREA[@]}" -type f -print0)
 
-elif [[ -d "${WORKSPACE}"/root/etc/cont-init.d  && ! -d "${WORKSPACE}"/root/etc/services.d ]]; then
-SHELLCHECK_OPTIONS="--exclude=SC1008 --format=checkstyle --shell=bash"
-MOUNT_OPTIONS="-v ${WORKSPACE}/root:/root"
-TEST_AREA="root/etc/cont-init.d"
+# exit with error if non executable shell scripts are found
+if [[ ${#NON_EXECUTABLE_FILES[@]} -ne 0 ]]; then
+    echo "the following shell scripts are not executable:"
+    printf "'%s'\n" "${NON_EXECUTABLE_FILES[@]}"
+    #exit 1 # errors for non executable files are reported by https://github.com/linuxserver/github-workflows/blob/v1/.github/workflows/init-svc-executable-permissions.yml
+fi
+
+# exit gracefully if no ALL_SHELL_FILES are found
+if [[ ${#ALL_SHELL_FILES[@]} -eq 0 ]]; then
+    echo "no common files found, linting not required"
+    exit 0
 fi
 
 # run shellcheck
-if [[ -d "${WORKSPACE}"/root/etc/cont-init.d || -d "${WORKSPACE}"/root/etc/services.d || \
--d "${WORKSPACE}"/init  || -d "${WORKSPACE}"/services ]];then
-
-docker pull ghcr.io/linuxserver/lsiodev-shellcheck
-
-docker run \
-	--rm=true -t \
-	${MOUNT_OPTIONS} \
-	ghcr.io/linuxserver/lsiodev-shellcheck \
-	find ${TEST_AREA} -type f -exec shellcheck ${SHELLCHECK_OPTIONS} {} + \
-	> ${WORKSPACE}/shellcheck-result.xml
-
-fi
-
-[[ ! -f ${WORKSPACE}/shellcheck-result.xml ]] && echo "<?xml version='1.0' encoding='UTF-8'?><checkstyle version='4.3'></checkstyle>" > ${WORKSPACE}/shellcheck-result.xml
+docker pull "${SHELLCKECK_IMAGE}"
+docker run --rm -t \
+    "${SHELLCKECK_IMAGE}" \
+    shellcheck --version
+find "${ALL_SHELL_FILES[@]}" -exec \
+    docker run --rm -t \
+    "${MOUNT_OPTIONS[@]}" \
+    "${SHELLCKECK_IMAGE}" \
+    shellcheck \
+    "${SHELLCHECK_OPTIONS[@]}" {} + \
+    >"${WORKSPACE}"/shellcheck-result.xml
 
 # exit gracefully
 exit 0
