@@ -13,9 +13,7 @@ SHELLCKECK_IMAGE="koalaman/shellcheck:stable"
 TEST_AREA=()
 
 # clear preexising checkstyle files
-if [[ -f "${WORKSPACE}"/shellcheck-result.xml ]]; then
-    rm "${WORKSPACE}"/shellcheck-result.xml
-fi
+echo "<?xml version='1.0' encoding='UTF-8'?><checkstyle version='4.3'></checkstyle>" >"${WORKSPACE}"/shellcheck-result.xml
 
 if [[ -d "${WORKSPACE}"/init ]]; then
     MOUNT_OPTIONS+=("-v" "${WORKSPACE}/init:/init")
@@ -79,10 +77,6 @@ find "${ALL_SHELL_FILES[@]}" -exec \
     shellcheck \
     "${SHELLCHECK_OPTIONS[@]}" {} + \
     >"${WORKSPACE}"/shellcheck-result.xml
-
-if [[ ! -f ${WORKSPACE}/shellcheck-result.xml ]]; then
-    echo "<?xml version='1.0' encoding='UTF-8'?><checkstyle version='4.3'></checkstyle>" >"${WORKSPACE}"/shellcheck-result.xml
-fi
 
 # exit gracefully
 exit 0
