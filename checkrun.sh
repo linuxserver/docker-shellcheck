@@ -9,9 +9,7 @@ EXECUTABLE_FILES=()
 MOUNT_OPTIONS=()
 NON_EXECUTABLE_FILES=()
 SHELLCHECK_OPTIONS=("--exclude=SC1008" "--format=checkstyle" "--shell=bash")
-SHELLCKECK_IMAGE="ghcr.io/linuxserver/lsiodev-shellcheck"
-# consider using official shellcheck image
-#SHELLCKECK_IMAGE="koalaman/shellcheck:stable"
+SHELLCKECK_IMAGE="koalaman/shellcheck:stable"
 TEST_AREA=()
 
 # clear preexising checkstyle files
