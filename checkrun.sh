@@ -39,6 +39,12 @@ if [[ -d "${WORKSPACE}"/root/etc/s6-overlay/s6-rc.d ]]; then
     TEST_AREA+=("root/etc/s6-overlay/s6-rc.d")
 fi
 
+# exit gracefully if no TEST_AREA are found
+if [[ ${#TEST_AREA[@]} -eq 0 ]]; then
+    echo "no common folders found, linting not required"
+    exit 0
+fi
+
 # check test area for executable files
 while IFS= read -r -d '' file; do
     if head -n1 "${file}" | grep -q -E -w "sh|bash|dash|ksh"; then
